@@ -17,21 +17,19 @@
 //   three: ' the',
 //   four: ' property',
 //   five: ' values.'
-// } 
+// };
 
-// for(var key in values) {
-//   console.log(values[key])
+// for (var key in values) {
+//   console.log(values[key]);
 // }
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// for(var key in values) {
-//   console.log(key)
+// for (var key in values) {
+//   console.log(key);
 // }
-
-
 
 ////////// PROBLEM 1 //////////
 
@@ -39,11 +37,21 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+};
+
+function showValues(obj) {
+  let rtn = '';
+  for (var key in obj) {
+    rtn += obj[key];
+  }
+  return rtn;
 }
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -53,9 +61,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
-
+function greaterThan10(obj) {
+  for (var value in obj) {
+    if (obj[value] > 10) {
+      obj[value] = 0;
+    }
+  }
+  return obj;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -66,8 +79,6 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -80,8 +91,6 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -101,8 +110,6 @@ function showValues( obj ) {
 
 // console.log(deleteAllThethings)
 
-
-
 ////////// PROBLEM 5 //////////
 
 /*
@@ -112,8 +119,6 @@ function showValues( obj ) {
 
 //Code Here
 
-
-
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -122,7 +127,7 @@ var deleteTheBigNumbers = {
   second: 20,
   third: 110,
   fourth: 200
-}
+};
 // Do not edit the code above.
 
 /*
@@ -130,8 +135,6 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 7 //////////
 
@@ -144,8 +147,6 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-
-
 ////////// PROBLEM 8 //////////
 
 /*
@@ -156,7 +157,3 @@ var deleteTheBigNumbers = {
 
   (hint: the method includes() may be of use...)
 */
-
-//Code Here
-
-

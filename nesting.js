@@ -11,34 +11,34 @@
 // Do not edit the code below.
 var employees = [
   {
-    "firstName": "Von",
-    "lastName": "Budibent",
-    "email": "vbudibent0@163.com",
-    "department": "Sales"
+    firstName: 'Von',
+    lastName: 'Budibent',
+    email: 'vbudibent0@163.com',
+    department: 'Sales'
   },
   {
-    "firstName": "Catherina",
-    "lastName": "Swalowe",
-    "email": "cswalowe1@example.com",
-    "department": "Engineering"
+    firstName: 'Catherina',
+    lastName: 'Swalowe',
+    email: 'cswalowe1@example.com',
+    department: 'Engineering'
   },
   {
-    "firstName": "Theo",
-    "lastName": "Trill",
-    "email": "ttrill2@sina.com.cn",
-    "department": "Services"
+    firstName: 'Theo',
+    lastName: 'Trill',
+    email: 'ttrill2@sina.com.cn',
+    department: 'Services'
   },
   {
-    "firstName": "Elsy",
-    "lastName": "McCrorie",
-    "email": "emccrorie3@netscape.com",
-    "department": "Legal"
+    firstName: 'Elsy',
+    lastName: 'McCrorie',
+    email: 'emccrorie3@netscape.com',
+    department: 'Legal'
   },
   {
-    "firstName": "Lorie",
-    "lastName": "Handsheart",
-    "email": "lhandsheart4@fotki.com",
-    "department": "Research and Development"
+    firstName: 'Lorie',
+    lastName: 'Handsheart',
+    email: 'lhandsheart4@fotki.com',
+    department: 'Research and Development'
   }
 ];
 // Do not edit the code above.
@@ -50,9 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+let employeeUpdater = function() {
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].firstName === 'Theo') {
+      employees.splice(i, 1);
+    }
+    if (employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR';
+    }
+  }
+  return employees;
+};
 
-
+employeeUpdater();
 
 ////////// PROBLEM 2 //////////
 
@@ -68,9 +78,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
-
-
+function removeDuplicates(arr) {
+  let noDups = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (noDups.indexOf(arr[i]) === -1) {
+      noDups.push(arr[i]);
+    }
+  }
+  return noDups;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -81,13 +97,13 @@ var cat = {
     {
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
-    }, 
+    },
     {
       name: 'Lazy Bones',
       activities: ['sleep', 'pre-sleep naps']
     }
   ]
-}
+};
 // Do not edit the code above.
 
 /*
@@ -99,8 +115,6 @@ var cat = {
 //Code Here
 var grumpyActivity;
 var fluffy2ndFriend;
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -126,7 +140,7 @@ var myCar = {
       atFaultForAccident: true
     }
   ]
-}
+};
 // Do not edit the code above.
 
 /*
@@ -140,12 +154,10 @@ var myCar = {
 
 //Code Here
 
-
-
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
@@ -158,5 +170,3 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
